@@ -12,7 +12,7 @@ class Item(BaseModel):
     @validator("price")
     def validate_price(cls, v):
         if v < 0:
-            raise ValueError("Price must be anpositive Decimal value")
+            raise ValueError("Price must be a positive Decimal value")
         return v
     
     @validator("status")
